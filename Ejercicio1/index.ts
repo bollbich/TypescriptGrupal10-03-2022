@@ -1,4 +1,3 @@
-
 enum valorVariable{
     cadenaVacia = "",
     numeroSinValor = 0
