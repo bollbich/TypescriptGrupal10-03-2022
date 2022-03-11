@@ -150,3 +150,7 @@ console.log('\n');
 console.log('Creando una lavadora con todos los datos obtenidos.');
 var electrodomestico1 = new Lavadora("Alberto", 125, 350, "rojo", "F", 100);
 console.log(electrodomestico1.ToString());
+console.log('\n');
+console.log('Creando una lavadora con todos los datos obtenidos.');
+var electrodomestico2 = new Lavadora("Olivia", 25, 35, "rojo", "A", 10);
+console.log(electrodomestico2.ToString());
