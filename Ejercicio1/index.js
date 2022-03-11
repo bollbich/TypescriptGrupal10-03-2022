@@ -84,15 +84,12 @@ var Persona = /** @class */ (function () {
     Persona.prototype.CalcularIMC = function () {
         var valor = this.peso / (this.altura * this.altura);
         if (valor < 20) {
-            console.log(valor);
             return -1;
         }
         else if (valor >= 20 && valor <= 25) {
-            console.log(valor);
             return 0;
         }
         else {
-            console.log(valor);
             return 1;
         }
     };
@@ -105,7 +102,7 @@ var Persona = /** @class */ (function () {
         }
     };
     Persona.prototype.ComprobarSexo = function (sexo) {
-        if (sexo == 'M' || sexo == 'H') {
+        if (sexo === "M" || sexo === "H") {
             return true;
         }
         else {
@@ -117,10 +114,11 @@ var Persona = /** @class */ (function () {
     };
     Persona.prototype.GeneraDNI = function () {
         var numero = Math.round(Math.random() * (99999999 - 10000000) + 10000000);
-        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
-        var letra = letras[Math.round(Math.random() * (22 - 0) + 0)];
-        var dniEntero = numero + "-" + letra;
+        var dniEntero = numero + "-" + "TRWAGMYFPDXBNJZSQVHLCKE".charAt(numero % 23);
         return dniEntero;
+        //let letras:string[] = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        //let letra:string = letras[Math.round(Math.random() * (22 - 0) + 0)];
+        //let dniEntero:string = numero +"-" +letra;
     };
     return Persona;
 }());
